@@ -88,22 +88,22 @@ int rand() {
 
 void draw() {
     rectangle(0, 0, 400, 400, 0xff555555);
-        // draw tile grid
-        for (int i = 0; i < 20; i++) {
-            for (int j = 0; j < 10; j++) {
-                drawTile(j, i, tiles[i][j]);
-            }
+    // draw tile grid
+    for (int i = 0; i < 20; i++) {
+        for (int j = 0; j < 10; j++) {
+            drawTile(j, i, tiles[i][j]);
         }
-        // draw falling piece
-        for (int i = 0; i < 4; i++) {
-            drawTile(fallingPiece.centerX + fallingPiece.x[i], fallingPiece.centerY + fallingPiece.y[i], fallingPiece.color);
-        }
-        rectangle(260, 80, 60, 80, 0);
-        // draw next piece
-        for (int i = 0; i < 4; i++) {
-            drawTile(14 + nextPiece.x[i], 5 + nextPiece.y[i], nextPiece.color);
-        }
-        //updateWindow(); // we will deal with this later
+    }
+    // draw falling piece
+    for (int i = 0; i < 4; i++) {
+        drawTile(fallingPiece.centerX + fallingPiece.x[i], fallingPiece.centerY + fallingPiece.y[i], fallingPiece.color);
+    }
+    rectangle(260, 80, 60, 80, 0);
+    // draw next piece
+    for (int i = 0; i < 4; i++) {
+        drawTile(14 + nextPiece.x[i], 5 + nextPiece.y[i], nextPiece.color);
+    }
+    //updateWindow(); // we will deal with this later
 }
 
 void update() {
